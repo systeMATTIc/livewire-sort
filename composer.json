@@ -1,0 +1,28 @@
+{
+  "name": "systemattic/livewire-sort",
+  "description": "A Standalone Livewire Table Column Sort Component",
+  "type": "library",
+  "license": "",
+  "authors": [
+    {
+      "name": "Matti Opeyemi",
+      "email": "matti7714@outlook.com"
+    }
+  ],
+  "require": {
+    "laravel/framework": "^7.0",
+    "livewire/livewire": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Systemattic\\LivewireSort\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Systemattic\\LivewireSort\\LivewireSortServiceProvider"
+      ]
+    }
+  }
+}
