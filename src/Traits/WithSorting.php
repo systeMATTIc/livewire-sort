@@ -12,9 +12,19 @@ trait WithSorting
     {
         $this->confirmSortingEventListening();
 
-        $this->confirmPropExists(config('livewire_sort.sort_field_property_name'));
+        $sortField = config('livewire_sort.sort_field_property_name');
+        $sortDirection = config('livewire_sort.sort_direction_property_name');
 
-        $this->confirmPropExists(config('livewire_sort.sort_direction_property_name'));
+        $this->confirmPropExists($sortField);
+        $this->confirmPropExists($sortDirection);
+
+        if (is_null($this->{$sortField})) {
+            $this->{$sortField} = config('livewire_sort.initial_sort_field');
+        }
+
+        if (is_null($this->{$sortDirection})) {
+            $this->{$sortDirection} = config('livewire_sort.initial_sort_direction');
+        }
     }
 
     public function sorting($event)
