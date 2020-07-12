@@ -4,6 +4,10 @@
 
 A Livewire component for handling sorting on data driven tables in livewire components.
 
+## Example
+
+[Livewire Sort Example Repository](https://github.com/systeMATTIc/livewire-sort-example)
+
 ## Installation
 
 Since this is a private demo, public installation via composer has not been setup. To use,
